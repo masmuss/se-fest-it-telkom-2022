@@ -732,6 +732,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 20rem;
 }
 
+.w-5{
+  width: 1.25rem;
+}
+
 .max-w-lg{
   max-width: 32rem;
 }
@@ -1521,6 +1525,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:text-gray-900:focus{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.focus\:text-gray-200:focus{
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus{
