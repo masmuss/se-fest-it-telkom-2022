@@ -1,3 +1,4 @@
+// sumenep
 const sumenepPie = document.getElementById("sumenep-pie").getContext("2d");
 const sumenepPieChart = new Chart(sumenepPie, {
 	type: "doughnut",
@@ -62,3 +63,24 @@ const sumenepBarChart = new Chart(sumenepBar, {
 		},
 	},
 });
+// end of sumenep
+
+// gresik
+const gresikPie = document.getElementById("gresik-pie").getContext("2d");
+const gresikBar = document.getElementById("gresik-bar").getContext("2d");
+// end of gresik
+
+// ndarjo
+const ndarjoPie = document.getElementById("ndarjo-pie").getContext("2d");
+const ndarjoBar = document.getElementById("ndarjo-bar").getContext("2d");
+// end of ndarjo
+
+// lamongan
+const lamonganPie = document.getElementById("lamongan-pie").getContext("2d");
+const lamonganBar = document.getElementById("lamongan-bar").getContext("2d");
+// end of lamongan
+
+// banyuwangi
+const banyuwangiPie = document.getElementById("banyuwangi-pie").getContext("2d");
+const banyuwangiBar = document.getElementById("banyuwangi-bar").getContext("2d");
+// end of banyuwangi

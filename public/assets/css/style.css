@@ -1035,6 +1035,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/img/gersik.jpg');
 }
 
+.bg-\[url\(\'\/assets\/img\/monumen_jayandaru\'\)\]{
+  background-image: url('/assets/img/monumen_jayandaru');
+}
+
+.bg-\[url\(\'\/assets\/img\/monumen_jayandaru\.\'\)\]{
+  background-image: url('/assets/img/monumen_jayandaru.');
+}
+
+.bg-\[url\(\'\/assets\/img\/monumen_jayandaru\.jpg\'\)\]{
+  background-image: url('/assets/img/monumen_jayandaru.jpg');
+}
+
 .bg-cover{
   background-size: cover;
 }
