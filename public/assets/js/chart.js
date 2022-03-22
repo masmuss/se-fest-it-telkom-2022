@@ -7,7 +7,7 @@ const sumenepPieChart = new Chart(sumenepPie, {
 		datasets: [{
 			text: "Hasil laut",
 			data: [94, 2, 1, 1],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -29,7 +29,7 @@ const sumenepBarChart = new Chart(sumenepBar, {
 		datasets: [{
 			text: "Hasil laut",
 			data: [94, 2, 2, 1],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -70,7 +70,7 @@ const gresikPieChart = new Chart(gresikPie, {
 		datasets: [{
 			label: "Hasil laut",
 			data: [70, 19, 10, 1],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -92,7 +92,7 @@ const gresikBarChart = new Chart(gresikBar, {
 		datasets: [{
 			label: "Hasil laut",
 			data: [70, 19, 10, 1],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -133,7 +133,7 @@ const ndarjoPieChart = new Chart(ndarjoPie, {
 		datasets: [{
 			label: "Hasil laut",
 			data: [56, 20, 16, 7],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -155,7 +155,7 @@ const ndarjoBarChart = new Chart(ndarjoBar, {
 		datasets: [{
 			label: "Hasil laut",
 			data: [56, 20, 16, 7],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -196,7 +196,7 @@ const lamonganPieChart = new Chart(lamonganPie, {
 		datasets: [{
 			label: "Hasil laut (dalam persen)",
 			data: [58, 39, 2, 1],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -218,7 +218,7 @@ const lamonganBarChart = new Chart(lamonganBar, {
 		datasets: [{
 			label: "Hasil laut (Ton)",
 			data: [58, 39, 2, 1],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -259,7 +259,7 @@ const banyuwangiPieChart = new Chart(banyuwangiPie, {
 		datasets: [{
 			label: "Hasil laut (dalam persen)",
 			data: [86, 10, 2, 1],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {
@@ -268,6 +268,11 @@ const banyuwangiPieChart = new Chart(banyuwangiPie, {
 		plugins: {
 			legend: {
 				position: "right",
+			},
+			title: {
+				display: true,
+				text: "Hasil Data",
+				align: "center",
 			},
 		},
 	},
@@ -281,7 +286,7 @@ const banyuwangiBarChart = new Chart(banyuwangiBar, {
 		datasets: [{
 			label: "Hasil laut (Ton)",
 			data: [86, 10, 2, 1],
-			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+			backgroundColor: ["rgba(241, 87, 33, 0.8)", "rgba(245, 184, 173, 0.8)", "rgba(0, 162, 233, 0.8)", "rgba(57, 66, 83, 0.8)"],
 		}, ],
 	},
 	options: {

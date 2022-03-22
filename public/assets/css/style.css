@@ -992,6 +992,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/img/wallpaperbetter.jpg');
 }
 
+.bg-\[url\(\'\/assets\/img\/kota-lamongan\.jpg\'\)\]{
+  background-image: url('/assets/img/kota-lamongan.jpg');
+}
+
+.bg-\[url\(\'\/assets\/img\/kota-banyuwangi\.jpg\'\)\]{
+  background-image: url('/assets/img/kota-banyuwangi.jpg');
+}
+
+.bg-\[url\(\'\/assets\/img\/kota-lamongan\.jpeg\'\)\]{
+  background-image: url('/assets/img/kota-lamongan.jpeg');
+}
+
+.bg-\[url\(\'\/assets\/img\/kota-banyuwagi\.jpg\'\)\]{
+  background-image: url('/assets/img/kota-banyuwagi.jpg');
+}
+
 .bg-cover{
   background-size: cover;
 }
