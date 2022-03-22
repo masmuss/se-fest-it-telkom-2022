@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+		<link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<title>Home</title>
+	</head>
+	<body
+		class="bg-gray-50 transition-all scroll-smooth"
+		x-data="{scrolledFromTop: false}"
+		x-init="window.pageYOffset > 860 ? scrolledFromTop = true : scrolledFromTop = false"
+		@scroll.window="window.pageYOffset > 860 ? scrolledFromTop = true : scrolledFromTop = false"
+	>
+		<!-- navbar -->
+		<header class="w-full fixed top-0 z-10 backdrop-filter text-gray-700 dark:text-gray-200 transition-all" :class="{'bg-gray-50': scrolledFromTop}" id="navbar">
+			<div x-data="{ open: false }" class="flex flex-col container px-4 mx-auto md:flex-row md:items-center md:justify-between md:px-6 lg:px-8">
+				<!-- brand logo -->
+				<div class="py-6 flex flex-row items-center justify-between">
+					<a href="#" class="text-lg lg:text-3xl font-bold tracking-wide rounded-lg focus:outline-none focus:shadow-outline flex items-center gap-4 text-gray-100">
+						<img src="assets/img/sidoNgoding_Logo.svg" alt="logo" class="w-12" />
+						<h3 :class="{'text-gray-700': scrolledFromTop}">jatim<span class="text-blue-500">Njaring</span></h3>
+					</a>
+					<button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+						<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+							<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+							<path
+								x-show="open"
+								fill-rule="evenodd"
+								d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+								clip-rule="evenodd"
+							></path>
+						</svg>
+					</button>
+				</div>
+				<!-- end of brand logo -->
+
+				<!-- menus -->
+				<nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+					<a
+						class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+						href="index.html"
+						:class="{'text-gray-100': !scrolledFromTop}"
+						>Home</a
+					>
+					<a
+						class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+						href="blog.html"
+						:class="{'text-gray-100': !scrolledFromTop}"
+						>About</a
+					>
+					<div @click.away="open = false" class="relative" x-data="{ open: false }">
+						<button
+							@click="open = !open"
+							class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+							:class="{'text-gray-100': !scrolledFromTop}"
+						>
+							<span>Data</span>
+							<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+							</svg>
+						</button>
+						<div
+							x-show="open"
+							x-transition:enter="transition ease-out duration-100"
+							x-transition:enter-start="transform opacity-0 scale-95"
+							x-transition:enter-end="transform opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-75"
+							x-transition:leave-start="transform opacity-100 scale-100"
+							x-transition:leave-end="transform opacity-0 scale-95"
+							class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
+						>
+							<div class="px-2 py-2 bg-gray-100 rounded-md shadow dark:bg-gray-700">
+								<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"
+									>Link #1</a
+								>
+								<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"
+									>Link #2</a
+								>
+								<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"
+									>Link #3</a
+								>
+							</div>
+						</div>
+					</div>
+					<a
+						class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+						href="#"
+						:class="{'text-gray-100': !scrolledFromTop}"
+						>Quote</a
+					>
+				</nav>
+				<!-- end of menus -->
+			</div>
+		</header>
+		<!-- end of navbar -->
+
+		<!-- hero -->
+		<div class="w-full h-screen bg-center bg-no-repeat bg-cover bg-fixed" style="background-image: url('assets/img/hero.jpg')" id="hero">
+			<div class="w-full h-screen bg-opacity-60 bg-black flex justify-center items-center relative">
+				<div class="mx-4 text-left text-white">
+					<h1 class="uppercase text-8xl drop-shadow-md mb-3">jawa timur</h1>
+					<h2 class="font-thin uppercase text-xl drop-shadow-md tracking-wider">maritime exploration</h2>
+				</div>
+				<div class="absolute bottom-3 space-y-4">
+					<span class="text-white text-lg">see more</span>
+					<svg class="w-8 h-8 animate-bounce mx-auto stroke-slate-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3"></path></svg>
+				</div>
+			</div>
+		</div>
+		<!-- end of hero -->
+
+		<main class="">
+			<section class="container my-40">
+				<div class="w-11/12 flex gap-10 items-center mx-auto relative">
+					<div class="w-full relative">
+						<img src="assets/img/icon Lingkaran.svg" alt="" class="absolute w-12 -right-6 -top-6 -z-10 animate-spin-slow" />
+						<img src="assets/img/Nelayan-Yang-Puas.jpg" alt="" class="rounded-lg" />
+						<img src="assets/img/icon X.svg" alt="" class="absolute -bottom-0 -left-10 -z-10 animate-spin-slow" />
+					</div>
+					<div class="w-full flex flex-col justify-center">
+						<h1 class="text-5xl uppercase font-bold tracking-wide text-gray-800">
+							<span class="text-fill-transparent text-stroke-2 text-stroke-orange-600">Indonesia</span> maritim</h1>
+						<div class="mt-10 flex flex-col gap-3 text-gray-700">
+							<p class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
+								Indonesia memiliki luas lautan lebih besar dibandingkan luas daratan. Hal ini menjadi tantangan tersendiri bagi Indonesia memajukan maritimnya. Luasnya lautan Indonesia dapat dilihat dari adanya garis pantai di
+								hampir setiap pulau di Indonesia. Panjang yang diukur kurang lebih 81.000 Km garis pantai untuk satu Indonesia.
+							</p>
+							<p class="text-justify">
+								Indonesia yang memiliki luas lautan cukup besar, menjadikan jumlah ikan yang berlimpah. Indonesia memiliki lebih dari 7 ribu jenis ikan laut, baik untuk dikonsumsi maupun ikan hias. Tak hanya jenis ikan,
+								kerang-kerangan, rumput laut, dan tentunya karang yang menjadi tempat tinggal ikan laut sangat berlimpah di seluruh laut di Indonesia.
+							</p>
+						</div>
+						<img src="assets/img/Group 3.svg" alt="" class="rounded-lg absolute top-10 w-24 -right-10 blur-sm" />
+					</div>
+				</div>
+			</section>
+
+			<section class="container my-40">
+				<div class="w-11/12 flex flex-row-reverse gap-10 items-center mx-auto relative">
+					<img src="assets/img/icon garing biru.svg" alt="" class="rounded-lg absolute top-20 w-24 -left-10 blur-sm -z-50" />
+					<div class="w-full">
+						<img src="assets/img/Frame 6.png" alt="" class="rounded-lg" />
+					</div>
+					<div class="w-full flex flex-col justify-center">
+						<h1 class="text-5xl uppercase font-bold tracking-wide text-gray-800">
+							<span class="text-fill-transparent text-stroke-2 text-stroke-blue-900">Ekspor</span> Jawa Timur
+						</h1>
+						<div class="mt-10 flex flex-col gap-3 text-gray-700">
+							<p class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
+								Dalam bidang kemaritiman di Indonesia, salah satunya provinsi di Jawa Timur yang berkontribusi di dalam ekspor perikanan internasional. Jawa Timur juga memiliki beragam hasil laut yang melimpah yang dapat diekspor ke
+								rana internasional. Provinsi Jawa Timur mencatat ekspor di sektor perikanan yang nilainya mencapai 14,4 juta dolar Amerika Serikat ke negara di Pasar Asia, Eropa, hingga Amerika.
+							</p>
+							<p class="text-justify">
+								Hal ini membuktikan Indonesia sangat berlimpah dalam bidang kemaritiman atau hasil tangkapan laut untuk di jual ke negara lain maupun negara sendiri. Sehingga di era new normal ini, Indonesia dapat menjalankan
+								ekonominya dengan baik dan para penjual ikan pasar atau pemilik UMKM (Usaha Mikro, Kecil, Menengah) dapat mendapatkan penghasilan di era new normal.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="container my-40">
+				<div class="max-w-lg py-5 border-b-2 border-orange-500 mx-auto">
+					<h1 class="text-5xl font-bold text-center uppercase tracking-wide text-gray-800">hasil laut jatim</h1>
+				</div>
+				<div class="owl-carousel owl-theme my-12">
+					<div class="item">
+						<div class="">
+							<img src="assets/img/ikan logo.svg" alt="" class="h-24" />
+							<div class="mt-5">
+								<h1 class="text-center font-bold text-2xl">16%</h1>
+								<h2 class="text-center font-semibold text-lg">Ikan Bandeng</h2>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="">
+							<img src="assets/img/rumput laut logo.svg" alt="" class="h-24" />
+							<div class="mt-5">
+								<h1 class="text-center font-bold text-2xl">65%</h1>
+								<h2 class="text-center font-semibold text-lg">Rumput laut</h2>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="">
+							<img src="assets/img/udang logo.svg" alt="" class="h-24" />
+							<div class="mt-5">
+								<h1 class="text-center font-bold text-2xl">10%</h1>
+								<h2 class="text-center font-semibold text-lg">Udang</h2>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="">
+							<img src="assets/img/ikan logo.svg" alt="" class="h-24" />
+							<div class="mt-5">
+								<h1 class="text-center font-bold text-2xl">9%</h1>
+								<h2 class="text-center font-semibold text-lg">Ikan Campuran</h2>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="">
+							<img src="assets/img/kepiting logo.svg" alt="" class="h-24" />
+							<div class="mt-5">
+								<h1 class="text-center font-bold text-2xl">1%</h1>
+								<h2 class="text-center font-semibold text-lg">Kepiting</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="max-w-sm px-4 border-l-2 border-orange-500 mx-auto">
+					<h2 class="text-4xl font-bold uppercase tracking-wide text-gray-800">1.044.600 TON</h2>
+					<h3 class="text-lg font-bold uppercase tracking-wide text-gray-600">Total hasil laut</h3>
+				</div>
+			</section>
+
+			<section class="container my-40 py-20 bg-section-bg bg-fixed bg-center bg-no-repeat bg-cover">
+				<h1 class="text-6xl font-bold text-center uppercase tracking-wide text-fill-transparent text-stroke text-stroke-white">kota penghasil terbanyak</h1>
+				<div class="flex justify-center mt-10 gap-14">
+					<div class="w-80 rounded-md cursor-pointer shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 duration-500">
+						<div class="w-full h-52">
+							<img src="assets/img/masjid-agung-sumenep.jpg" alt="" class="h-52"/>
+						</div>
+						<div class="p-4 bg-white bg-opacity-5 backdrop-filter backdrop-blur-lg">
+							<h1 class="mt-4 font-bold text-2xl text-white">Sumenep</h1>
+							<p class="mt-4 text-white">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint delectus ullam mollitia deleniti aperiam voluptatibus, error soluta et nam nihil aspernatur, iste id dolore voluptate? Ipsa autem iure sequi consectetur!
+							</p>
+						</div>
+					</div>
+					<div class="w-80 rounded-md cursor-pointer shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 duration-500">
+						<div class="w-full h-52">
+							<img src="assets/img/gambar kota gersik.jpg" alt="" class="w-full"/>
+						</div>
+						<div class="p-4 bg-white bg-opacity-5 backdrop-filter backdrop-blur-lg">
+							<h1 class="mt-4 font-bold text-2xl text-white">Gresik</h1>
+							<p class="mt-4 text-white">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint delectus ullam mollitia deleniti aperiam voluptatibus, error soluta et nam nihil aspernatur, iste id dolore voluptate? Ipsa autem iure sequi consectetur!
+							</p>
+						</div>
+					</div>
+					<div class="w-80 rounded-md cursor-pointer shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 duration-500">
+						<div class="w-full h-52">
+							<img src="assets/img/monumen_jayandaru.jpg" alt="" class="w-full"/>
+						</div>
+						<div class="p-4 bg-white bg-opacity-5 backdrop-filter backdrop-blur-lg">
+							<h1 class="mt-4 font-bold text-2xl text-white">Sidoarjo</h1>
+							<p class="mt-4 text-white">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint delectus ullam mollitia deleniti aperiam voluptatibus, error soluta et nam nihil aspernatur, iste id dolore voluptate? Ipsa autem iure sequi consectetur!
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-10 flex justify-center">
+					<a href="detail.html" class="px-4 py-2 border-2 border-white rounded-md text-lg transform hover:scale-105 text-white transition-all"> Lihat detail </a>
+				</div>
+			</section>
+
+			<section class="container my-40">
+				<div class="w-11/12 flex flex-row-reverse gap-10 items-center mx-auto relative">
+					<div class="w-full">
+						<img src="assets/img/gambar section quotes.png" alt="" class="rounded-lg" />
+					</div>
+					<div class="w-full flex flex-col justify-center">
+						<h1 class="text-5xl uppercase font-bold tracking-wide text-gray-800">
+							<span class="text-fill-transparent text-stroke-2 text-stroke-orange-600">Fisherman</span> Quotes
+						</h1>
+						<div class="mt-10 flex flex-col gap-3 text-gray-900">
+							<div class="max-w-4xl p-4 text-gray-800">
+								<div class="mb-2">
+									<div class="h-3 text-3xl text-left text-gray-600">“</div>
+									<p class="px-4 text-left text-gray-600">Many men go fishing their whole lives without knowing that it is not the fish they are looking for</p>
+									<p class="font-semibold italic mt-3">&mdash; Henry David Thoreau</p>
+									<div class="h-3 text-3xl text-right text-gray-600">”</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img src="assets/img/icon silang zebra.svg" alt="" class="rounded-lg absolute top-20 w-24 -right-10 -z-50" />
+				</div>
+			</section>
+		</main>
+
+		<footer class="text-center lg:text-left">
+			<div class="bg-gray-300 text-gray-700 text-center p-4">
+				Made with ❤️ in Sidoarjo
+			</div>
+			<div class="bg-gray-200 text-gray-700 text-center p-2.5 text-sm">
+				&copy; 2020 by
+				<a class="text-gray-800" href="#">sido<span class="font-semibold">Ngoding</span> team</a> 
+			</div>
+		</footer>
+
+		<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+		<script src="assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>

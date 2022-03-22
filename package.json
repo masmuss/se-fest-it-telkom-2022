@@ -1,0 +1,16 @@
+{
+	"name": "vanilla-se-fest",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npx tailwindcss -i ./src/css/app.css -o ./public/assets/css/style.css --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"tailwindcss": "^3.0.23",
+		"tailwindcss-text-fill-stroke": "^1.1.2"
+	}
+}
