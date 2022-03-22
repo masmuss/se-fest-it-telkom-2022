@@ -1047,6 +1047,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/img/monumen_jayandaru.jpg');
 }
 
+.bg-\[url\(\'\/assets\/img\/gresik\.jpg\'\)\]{
+  background-image: url('/assets/img/gresik.jpg');
+}
+
 .bg-cover{
   background-size: cover;
 }
