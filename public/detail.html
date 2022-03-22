@@ -1,273 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
-		<link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<title>Home</title>
-	</head>
-	<body class="bg-gray-50 transition-all scroll-smooth">
-		<!-- navbar -->
-		<header class="w-full fixed top-0 z-10 backdrop-filter text-gray-700 bg-gray-50 transition-all" id="navbar">
-			<div x-data="{ open: false }" class="flex flex-col container px-4 mx-auto md:flex-row md:items-center md:justify-between md:px-6 lg:px-8">
-				<!-- brand logo -->
-				<div class="py-6 flex flex-row items-center justify-between">
-					<a href="#" class="text-lg lg:text-3xl font-bold tracking-wide rounded-lg focus:outline-none focus:shadow-outline flex items-center gap-4 text-gray-700">
-						<img src="assets/img/sidoNgoding_Logo.svg" alt="logo" class="w-12" />
-						<h3>jatim<span class="text-blue-500">Njaring</span></h3>
-					</a>
-					<button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-						<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-							<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-							<path
-								x-show="open"
-								fill-rule="evenodd"
-								d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-								clip-rule="evenodd"
-							></path>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<title>Home</title>
+</head>
+
+<body class="bg-gray-50 transition-all scroll-smooth">
+	<!-- navbar -->
+	<header class="w-full fixed top-0 z-10 backdrop-filter text-gray-700 bg-gray-50 transition-all" id="navbar">
+		<div x-data="{ open: false }"
+			class="flex flex-col container px-4 mx-auto md:flex-row md:items-center md:justify-between md:px-6 lg:px-8">
+			<!-- brand logo -->
+			<div class="py-6 flex flex-row items-center justify-between">
+				<a href="#"
+					class="text-lg lg:text-3xl font-bold tracking-wide rounded-lg focus:outline-none focus:shadow-outline flex items-center gap-4 text-gray-700">
+					<img src="assets/img/sidoNgoding_Logo.svg" alt="logo" class="w-12" />
+					<h3>jatim<span class="text-blue-500">Njaring</span></h3>
+				</a>
+				<button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+						<path x-show="!open" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+							clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+			<!-- end of brand logo -->
+
+			<!-- menus -->
+			<nav :class="{'flex': open, 'hidden': !open}"
+				class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+				<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+					href="index.html">Home</a>
+				<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+					href="index.html">About</a>
+				<div @click.away="open = false" class="relative" x-data="{ open: false }">
+					<button @click="open = !open"
+						class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+						<span>Data</span>
+						<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+							class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+							<path fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
 						</svg>
 					</button>
+					<div x-show="open" x-transition:enter="transition ease-out duration-100"
+						x-transition:enter-start="transform opacity-0 scale-95"
+						x-transition:enter-end="transform opacity-100 scale-100"
+						x-transition:leave="transition ease-in duration-75"
+						x-transition:leave-start="transform opacity-100 scale-100"
+						x-transition:leave-end="transform opacity-0 scale-95"
+						class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+						<div class="px-2 py-2 bg-gray-100 rounded-md shadow dark:bg-gray-700">
+							<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+								href="index.html">Data Persentase</a>
+							<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+								href="detail.html">Data Kota</a>
+						</div>
+					</div>
 				</div>
-				<!-- end of brand logo -->
+				<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+					href="#">Quote</a>
+			</nav>
+			<!-- end of menus -->
+		</div>
+	</header>
+	<!-- end of navbar -->
 
-				<!-- menus -->
-				<nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-					<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html"
-						>Home</a
-					>
-					<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="blog.html"
-						>About</a
-					>
-					<div @click.away="open = false" class="relative" x-data="{ open: false }">
-						<button
-							@click="open = !open"
-							class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-						>
-							<span>Data</span>
-							<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-							</svg>
-						</button>
-						<div
-							x-show="open"
-							x-transition:enter="transition ease-out duration-100"
-							x-transition:enter-start="transform opacity-0 scale-95"
-							x-transition:enter-end="transform opacity-100 scale-100"
-							x-transition:leave="transition ease-in duration-75"
-							x-transition:leave-start="transform opacity-100 scale-100"
-							x-transition:leave-end="transform opacity-0 scale-95"
-							class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
-						>
-							<div class="px-2 py-2 bg-gray-100 rounded-md shadow dark:bg-gray-700">
-								<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"
-									>Link #1</a
-								>
-								<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"
-									>Link #2</a
-								>
-								<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#"
-									>Link #3</a
-								>
+	<main class="min-h-screen">
+		<!-- sumenep -->
+		<section class="container my-40">
+			<div class="w-11/12 flex items-stretch gap-10 mx-auto">
+				<div
+					class="w-4/5 bg-[url('/assets/img/masjid-agung-sumenep.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg">
+				</div>
+				<div class="w-full flex flex-col justify-center">
+					<div class="p-6 rounded-lg shadow-lg">
+						<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">1. Sumenep</h1>
+						<div class="space-y-2 mt-3">
+							<p
+								class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
+								Kabupaten Sumenep merupakan daerah yang memiliki potensi rumput laut terbesar di Jawa
+								Timur dengan bukti hasil rumput laut yang melimpah. Wilayah pantai yang landai,
+								ekosistem terumbu karang yang bagus sangat
+								mendukung terhadap pertumbuhan laut.
+							</p>
+							<p class="text-justify">Kabupaten Sumenep yang memiliki luas budidaya rumput laut mencapai
+								5.795 ha dapat menghasilkan sampai 670.400 ton di tahun terakhir yang dijual untuk
+								nasional maupun internasional.</p>
+						</div>
+					</div>
+					<div class="p-6 rounded-lg shadow-lg">
+						<div class="p-2">
+							<h6 class="text-center font-semibold">100% (674.371 Ton)</h6>
+						</div>
+						<div class="w-full flex items-center gap-3">
+							<div class="w-1/2">
+								<canvas id="sumenep-pie"></canvas>
+							</div>
+							<div class="w-1/2">
+								<canvas id="sumenep-bar"></canvas>
 							</div>
 						</div>
 					</div>
-					<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Quote</a>
-				</nav>
-				<!-- end of menus -->
+				</div>
 			</div>
-		</header>
-		<!-- end of navbar -->
+		</section>
+		<!-- end of sumenep -->
 
-		<main class="min-h-screen">
-			<!-- sumenep -->
-			<section class="container my-40">
-				<div class="w-11/12 flex items-stretch gap-10 mx-auto">
-					<div class="w-4/5 bg-[url('/assets/img/masjid-agung-sumenep.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"></div>
-					<div class="w-full flex flex-col justify-center">
-						<div class="p-6 rounded-lg shadow-lg">
-							<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">1. Sumenep</h1>
-							<div class="space-y-2 mt-3">
-								<p class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
-									Kabupaten Sumenep merupakan daerah yang memiliki potensi rumput laut terbesar di Jawa Timur dengan bukti hasil rumput laut yang melimpah. Wilayah pantai yang landai, ekosistem terumbu karang yang bagus sangat
-									mendukung terhadap pertumbuhan laut.
-								</p>
-								<p class="text-justify">Kabupaten Sumenep yang memiliki luas budidaya rumput laut mencapai 5.795 ha dapat menghasilkan sampai 670.400 ton di tahun terakhir yang dijual untuk nasional maupun internasional.</p>
-							</div>
+		<!-- gresik -->
+		<section class="container my-40">
+			<div class="w-11/12 flex items-stretch gap-10 mx-auto">
+				<div
+					class="w-4/5 bg-[url('/assets/img/gresik.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg">
+				</div>
+				<div class="w-full flex flex-col justify-center">
+					<div class="p-6 rounded-lg shadow-lg">
+						<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">2. Gresik</h1>
+						<div class="space-y-2 mt-3">
+							<p
+								class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
+								Kabupaten Gresik merupakan salah satu pusat produksi ikan bandeng di Indonesia. Wilayah
+								di kawasan timur laut Jawa ini menghasilkan bandeng sekitar 40 - 90 ribu Ton per tahun.
+								Secara sosial, tiap tahun menjelang
+								idul fitri , warga akan menggelar Pasar Bandeng selama 3 hari.
+							</p>
+							<p class="text-justify">
+								Pasar Bandeng tidak hanya menjual belikan ikan bandeng, tetapi juga ada kontes ikan
+								bandeng. Hal ini menunjukkan bahwa ikan bandeng tak hanya penting secara ekonomi, tetapi
+								juga sosial dari masyarakat Gresik.
+							</p>
 						</div>
-						<div class="p-6 rounded-lg shadow-lg">
-							<div class="p-2">
-								<h6 class="text-center font-semibold">100% (674.371 Ton)</h6>
+					</div>
+					<div class="p-6 rounded-lg shadow-lg">
+						<div class="p-2">
+							<h6 class="text-center font-semibold">100% (128.931 Ton)</h6>
+						</div>
+						<div class="w-full flex items-center gap-3">
+							<div class="w-1/2">
+								<canvas id="gresik-pie"></canvas>
 							</div>
-							<div class="w-full flex items-center gap-3">
-								<div class="w-1/2">
-									<canvas id="sumenep-pie"></canvas>
-								</div>
-								<div class="w-1/2">
-									<canvas id="sumenep-bar"></canvas>
-								</div>
+							<div class="w-1/2">
+								<canvas id="gresik-bar"></canvas>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end of sumenep -->
-
-			<!-- gresik -->
-			<section class="container my-40">
-				<div class="w-11/12 flex items-stretch gap-10 mx-auto">
-					<div class="w-4/5 bg-[url('/assets/img/gresik.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"></div>
-					<div class="w-full flex flex-col justify-center">
-						<div class="p-6 rounded-lg shadow-lg">
-							<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">2. Gresik</h1>
-							<div class="space-y-2 mt-3">
-								<p class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
-									Kabupaten Gresik merupakan salah satu pusat produksi ikan bandeng di Indonesia. Wilayah di kawasan timur laut Jawa ini menghasilkan bandeng sekitar 40 - 90 ribu Ton per tahun. Secara sosial, tiap tahun menjelang
-									idul fitri , warga akan menggelar Pasar Bandeng selama 3 hari.
-								</p>
-								<p class="text-justify">
-									Pasar Bandeng tidak hanya menjual belikan ikan bandeng, tetapi juga ada kontes ikan bandeng. Hal ini menunjukkan bahwa ikan bandeng tak hanya penting secara ekonomi, tetapi juga sosial dari masyarakat Gresik.
-								</p>
-							</div>
-						</div>
-						<div class="p-6 rounded-lg shadow-lg">
-							<div class="p-2">
-								<h6 class="text-center font-semibold">100% (128.931 Ton)</h6>
-							</div>
-							<div class="w-full flex items-center gap-3">
-								<div class="w-1/2">
-									<canvas id="gresik-pie"></canvas>
-								</div>
-								<div class="w-1/2">
-									<canvas id="gresik-bar"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end of gresik -->
-
-			<!-- ndarjo -->
-			<section class="container my-40">
-				<div class="w-11/12 flex items-stretch gap-10 mx-auto">
-					<div class="w-4/5 bg-[url('/assets/img/monumen_jayandaru.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"></div>
-					<div class="w-full flex flex-col justify-center">
-						<div class="p-6 rounded-lg shadow-lg">
-							<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">3. Sidoarjo</h1>
-							<div class="space-y-2 mt-3">
-								<p class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
-									Kabupaten Sidoarjo, sesuai dengan logo Sidoarjo itu sendiri, daerah ini merupakan penghasil ikan bandeng dan udang yang melimpah. Produksi kedua komoditas ini mencapai 85% dan 70% di antaranya merupakan produksi
-									bandeng.
-								</p>
-								<p class="text-justify">
-									Jumlah petani tambak bandeng & udang di Sidoarjo sekitar 3.500 orang dan ribuan pandega atau orang yang membantu kegiatan tambak. Sedangkan lahan tambak yang berdekatan dengan laut mencapai 15.530 hektar, tersebar
-									di sejumlah desa.
-								</p>
-							</div>
-						</div>
-						<div class="p-6 rounded-lg shadow-lg">
-							<div class="p-2">
-								<h6 class="text-center font-semibold">100% (60.700 Ton)</h6>
-							</div>
-							<div class="w-full flex items-center gap-3">
-								<div class="w-1/2">
-									<canvas id="ndarjo-pie"></canvas>
-								</div>
-								<div class="w-1/2">
-									<canvas id="ndarjo-bar"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end of ndarjo -->
-
-			<!-- lamongan -->
-			<section class="container my-40">
-				<div class="w-11/12 flex items-stretch gap-10 mx-auto">
-					<div class="w-4/5 bg-[url('/assets/img/masjid-agung-sumenep.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"></div>
-					<div class="w-full flex flex-col justify-center">
-						<div class="p-6 rounded-lg shadow-lg">
-							<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">4. Lamongan</h1>
-							<div class="space-y-2 mt-3">
-								<p class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
-									Kabupaten Lamongan merupakan kabupaten yang meminati budidaya ikan kerapu. Kurangnya penghasilan ikan kerapu di Indonesia membuat kabupaten Lamongan menjadi pembudidaya ikan kerapu terbanyak di Jawa Timur.
-								</p>
-								<p class="text-justify">
-									Desa Labuhan, Kecamatan Brondong, Kabupaten Lamongan adalah salah satu tempat yang dijadikannya budidaya ikan kerapu dengan luas dengan 20 ha di desa tersebut. Ikan kerapu akan mahal harganya jika dijual dalam
-									keadaan hidup.
-								</p>
-							</div>
-						</div>
-						<div class="p-6 rounded-lg shadow-lg">
-							<div class="p-2">
-								<h6 class="text-center font-semibold">100% (40.908 Ton)</h6>
-							</div>
-							<div class="w-full flex items-center gap-3">
-								<div class="w-1/2">
-									<canvas id="lamongan-pie"></canvas>
-								</div>
-								<div class="w-1/2">
-									<canvas id="lamongan-bar"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end of lamongan -->
-
-			<!-- banyuwangi -->
-			<section class="container my-40">
-				<div class="w-11/12 flex items-stretch gap-10 mx-auto">
-					<div class="w-4/5 bg-[url('/assets/img/masjid-agung-sumenep.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"></div>
-					<div class="w-full flex flex-col justify-center">
-						<div class="p-6 rounded-lg shadow-lg">
-							<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">5. Banyuwangi</h1>
-							<div class="space-y-2 mt-3">
-								<p class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
-									Kabupaten Banyuwangi menjadi salah satu wilayah penghasil udang terbanyak di Jawa Timur. Luas perikanan tambak udang Banyuwangi sendiri seluas 1.384 ha dengan produksi 19 sampai 20 ribu ton dalam kurun waktu 1
-									tahun terakhir.
-								</p>
-								<p class="text-justify">
-									Tidak hanya udang, kabupaten Banyuwangi juga mendorong untuk budidaya rumput laut. Luas pembudidayaan rumput laut mencapai 70 ha dengan hasil mencapai 2.700 ton di tahun terakhir
-								</p>
-							</div>
-						</div>
-						<div class="p-6 rounded-lg shadow-lg">
-							<div class="p-2">
-								<h6 class="text-center font-semibold">100% (24.824 Ton)</h6>
-							</div>
-							<div class="w-full flex items-center gap-3">
-								<div class="w-1/2">
-									<canvas id="banyuwangi-pie"></canvas>
-								</div>
-								<div class="w-1/2">
-									<canvas id="banyuwangi-bar"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end of banyuwangi -->
-		</main>
-
-		<footer class="text-center lg:text-left">
-			<div class="bg-gray-300 text-gray-700 text-center p-4">Made with ❤️ in Sidoarjo</div>
-			<div class="bg-gray-200 text-gray-700 text-center p-2.5 text-sm">
-				&copy; 2020 by
-				<a class="text-gray-800" href="#">sido<span class="font-semibold">Ngoding</span> team</a>
 			</div>
-		</footer>
+		</section>
+		<!-- end of gresik -->
 
-		<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-		<script src="assets/js/chart.js"></script>
-	</body>
+		<!-- ndarjo -->
+		<section class="container my-40">
+			<div class="w-11/12 flex items-stretch gap-10 mx-auto">
+				<div
+					class="w-4/5 bg-[url('/assets/img/monumen_jayandaru.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg">
+				</div>
+				<div class="w-full flex flex-col justify-center">
+					<div class="p-6 rounded-lg shadow-lg">
+						<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">3. Sidoarjo</h1>
+						<div class="space-y-2 mt-3">
+							<p
+								class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
+								Kabupaten Sidoarjo, sesuai dengan logo Sidoarjo itu sendiri, daerah ini merupakan
+								penghasil ikan bandeng dan udang yang melimpah. Produksi kedua komoditas ini mencapai
+								85% dan 70% di antaranya merupakan produksi
+								bandeng.
+							</p>
+							<p class="text-justify">
+								Jumlah petani tambak bandeng & udang di Sidoarjo sekitar 3.500 orang dan ribuan pandega
+								atau orang yang membantu kegiatan tambak. Sedangkan lahan tambak yang berdekatan dengan
+								laut mencapai 15.530 hektar, tersebar
+								di sejumlah desa.
+							</p>
+						</div>
+					</div>
+					<div class="p-6 rounded-lg shadow-lg">
+						<div class="p-2">
+							<h6 class="text-center font-semibold">100% (60.700 Ton)</h6>
+						</div>
+						<div class="w-full flex items-center gap-3">
+							<div class="w-1/2">
+								<canvas id="ndarjo-pie"></canvas>
+							</div>
+							<div class="w-1/2">
+								<canvas id="ndarjo-bar"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end of ndarjo -->
+
+		<!-- lamongan -->
+		<section class="container my-40">
+			<div class="w-11/12 flex items-stretch gap-10 mx-auto">
+				<div
+					class="w-4/5 bg-[url('/assets/img/masjid-agung-sumenep.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg">
+				</div>
+				<div class="w-full flex flex-col justify-center">
+					<div class="p-6 rounded-lg shadow-lg">
+						<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">4. Lamongan</h1>
+						<div class="space-y-2 mt-3">
+							<p
+								class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
+								Kabupaten Lamongan merupakan kabupaten yang meminati budidaya ikan kerapu. Kurangnya
+								penghasilan ikan kerapu di Indonesia membuat kabupaten Lamongan menjadi pembudidaya ikan
+								kerapu terbanyak di Jawa Timur.
+							</p>
+							<p class="text-justify">
+								Desa Labuhan, Kecamatan Brondong, Kabupaten Lamongan adalah salah satu tempat yang
+								dijadikannya budidaya ikan kerapu dengan luas dengan 20 ha di desa tersebut. Ikan kerapu
+								akan mahal harganya jika dijual dalam
+								keadaan hidup.
+							</p>
+						</div>
+					</div>
+					<div class="p-6 rounded-lg shadow-lg">
+						<div class="p-2">
+							<h6 class="text-center font-semibold">100% (40.908 Ton)</h6>
+						</div>
+						<div class="w-full flex items-center gap-3">
+							<div class="w-1/2">
+								<canvas id="lamongan-pie"></canvas>
+							</div>
+							<div class="w-1/2">
+								<canvas id="lamongan-bar"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end of lamongan -->
+
+		<!-- banyuwangi -->
+		<section class="container my-40">
+			<div class="w-11/12 flex items-stretch gap-10 mx-auto">
+				<div
+					class="w-4/5 bg-[url('/assets/img/masjid-agung-sumenep.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg">
+				</div>
+				<div class="w-full flex flex-col justify-center">
+					<div class="p-6 rounded-lg shadow-lg">
+						<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">5. Banyuwangi</h1>
+						<div class="space-y-2 mt-3">
+							<p
+								class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:font-serif first-letter:px-2">
+								Kabupaten Banyuwangi menjadi salah satu wilayah penghasil udang terbanyak di Jawa Timur.
+								Luas perikanan tambak udang Banyuwangi sendiri seluas 1.384 ha dengan produksi 19 sampai
+								20 ribu ton dalam kurun waktu 1
+								tahun terakhir.
+							</p>
+							<p class="text-justify">
+								Tidak hanya udang, kabupaten Banyuwangi juga mendorong untuk budidaya rumput laut. Luas
+								pembudidayaan rumput laut mencapai 70 ha dengan hasil mencapai 2.700 ton di tahun
+								terakhir
+							</p>
+						</div>
+					</div>
+					<div class="p-6 rounded-lg shadow-lg">
+						<div class="p-2">
+							<h6 class="text-center font-semibold">100% (24.824 Ton)</h6>
+						</div>
+						<div class="w-full flex items-center gap-3">
+							<div class="w-1/2">
+								<canvas id="banyuwangi-pie"></canvas>
+							</div>
+							<div class="w-1/2">
+								<canvas id="banyuwangi-bar"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end of banyuwangi -->
+	</main>
+
+	<footer class="text-center lg:text-left">
+		<div class="bg-gray-300 text-gray-700 text-center p-4">Made with ❤️ in Sidoarjo</div>
+		<div class="bg-gray-200 text-gray-700 text-center p-2.5 text-sm">
+			&copy; 2020 by
+			<a class="text-gray-800" href="#">sido<span class="font-semibold">Ngoding</span> team</a>
+		</div>
+	</footer>
+
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+		integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+	<script src="assets/js/chart.js"></script>
+</body>
+
 </html>

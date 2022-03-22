@@ -668,12 +668,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1rem;
 }
 
-.h-max{
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-
 .h-screen{
   height: 100vh;
 }
@@ -692,14 +686,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-3{
   height: 0.75rem;
-}
-
-.h-auto{
-  height: auto;
-}
-
-.h-full{
-  height: 100%;
 }
 
 .min-h-screen{
@@ -862,14 +848,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column;
 }
 
-.place-content-stretch{
-  place-content: stretch;
-}
-
-.items-start{
-  align-items: flex-start;
-}
-
 .items-center{
   align-items: center;
 }
@@ -930,10 +908,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.375rem;
 }
 
-.rounded{
-  border-radius: 0.25rem;
-}
-
 .border-2{
   border-width: 2px;
 }
@@ -970,11 +944,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.bg-gray-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
@@ -1003,52 +972,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 0.05;
 }
 
-.bg-section-bg{
-  background-image: url('/assets/img/wallpaperbetter.jpg');
-}
-
-.bg-\[url\(\'\'\)\]{
-  background-image: url('');
-}
-
-.bg-\[url\(\'assets\/img\/masjid-agung-sumenep\.jpg\'\)\]{
-  background-image: url('assets/img/masjid-agung-sumenep.jpg');
-}
-
-.bg-\[url\(\'\.\/assets\/img\/masjid-agung-sumenep\.jpg\'\)\]{
-  background-image: url('./assets/img/masjid-agung-sumenep.jpg');
-}
-
 .bg-\[url\(\'\/assets\/img\/masjid-agung-sumenep\.jpg\'\)\]{
   background-image: url('/assets/img/masjid-agung-sumenep.jpg');
 }
 
-.bg-\[url\(\'\/assets\/img\/gre\.jpg\'\)\]{
-  background-image: url('/assets/img/gre.jpg');
-}
-
-.bg-\[url\(\'\/assets\/img\/\'\)\]{
-  background-image: url('/assets/img/');
-}
-
-.bg-\[url\(\'\/assets\/img\/gersik\.jpg\'\)\]{
-  background-image: url('/assets/img/gersik.jpg');
-}
-
-.bg-\[url\(\'\/assets\/img\/monumen_jayandaru\'\)\]{
-  background-image: url('/assets/img/monumen_jayandaru');
-}
-
-.bg-\[url\(\'\/assets\/img\/monumen_jayandaru\.\'\)\]{
-  background-image: url('/assets/img/monumen_jayandaru.');
+.bg-\[url\(\'\/assets\/img\/gresik\.jpg\'\)\]{
+  background-image: url('/assets/img/gresik.jpg');
 }
 
 .bg-\[url\(\'\/assets\/img\/monumen_jayandaru\.jpg\'\)\]{
   background-image: url('/assets/img/monumen_jayandaru.jpg');
 }
 
-.bg-\[url\(\'\/assets\/img\/gresik\.jpg\'\)\]{
-  background-image: url('/assets/img/gresik.jpg');
+.bg-section-bg{
+  background-image: url('/assets/img/wallpaperbetter.jpg');
 }
 
 .bg-cover{
@@ -1152,36 +1089,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5rem;
 }
 
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-7xl{
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-9xl{
-  font-size: 8rem;
-  line-height: 1;
-}
-
 .text-8xl{
   font-size: 6rem;
   line-height: 1;
@@ -1190,6 +1097,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold{
