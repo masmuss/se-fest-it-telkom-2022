@@ -656,6 +656,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: -8rem;
 }
 
+.top-32{
+  top: 8rem;
+}
+
+.-right-16{
+  right: -4rem;
+}
+
+.top-16{
+  top: 4rem;
+}
+
+.top-24{
+  top: 6rem;
+}
+
 .z-10{
   z-index: 10;
 }
