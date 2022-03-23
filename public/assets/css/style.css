@@ -572,6 +572,90 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 5rem;
 }
 
+.-right-7{
+  right: -1.75rem;
+}
+
+.top-5{
+  top: 1.25rem;
+}
+
+.top-3{
+  top: 0.75rem;
+}
+
+.-bottom-5{
+  bottom: -1.25rem;
+}
+
+.-bottom-1{
+  bottom: -0.25rem;
+}
+
+.bottom-1{
+  bottom: 0.25rem;
+}
+
+.-top-1{
+  top: -0.25rem;
+}
+
+.top-1{
+  top: 0.25rem;
+}
+
+.top-40{
+  top: 10rem;
+}
+
+.-right-20{
+  right: -5rem;
+}
+
+.top-96{
+  top: 24rem;
+}
+
+.bottom-0{
+  bottom: 0px;
+}
+
+.-bottom-10{
+  bottom: -2.5rem;
+}
+
+.bottom-10{
+  bottom: 2.5rem;
+}
+
+.-bottom-20{
+  bottom: -5rem;
+}
+
+.-bottom-16{
+  bottom: -4rem;
+}
+
+.-left-20{
+  left: -5rem;
+}
+
+.-left-5{
+  left: -1.25rem;
+}
+
+.-left-0{
+  left: -0px;
+}
+
+.left-1{
+  left: 0.25rem;
+}
+
+.-left-32{
+  left: -8rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -582,6 +666,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .-z-50{
   z-index: -50;
+}
+
+.-z-0{
+  z-index: 0;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 .mx-auto{
@@ -732,10 +824,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 20rem;
 }
 
-.w-5{
-  width: 1.25rem;
-}
-
 .max-w-lg{
   max-width: 32rem;
 }
@@ -880,12 +968,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.75rem;
 }
 
-.gap-14{
-  gap: 3.5rem;
-}
-
 .gap-12{
   gap: 3rem;
+}
+
+.gap-5{
+  gap: 1.25rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -992,24 +1080,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/img/monumen_jayandaru.jpg');
 }
 
-.bg-section-bg{
-  background-image: url('/assets/img/wallpaperbetter.jpg');
-}
-
-.bg-\[url\(\'\/assets\/img\/kota-lamongan\.jpg\'\)\]{
-  background-image: url('/assets/img/kota-lamongan.jpg');
-}
-
-.bg-\[url\(\'\/assets\/img\/kota-banyuwangi\.jpg\'\)\]{
-  background-image: url('/assets/img/kota-banyuwangi.jpg');
-}
-
 .bg-\[url\(\'\/assets\/img\/kota-lamongan\.jpeg\'\)\]{
   background-image: url('/assets/img/kota-lamongan.jpeg');
 }
 
 .bg-\[url\(\'\/assets\/img\/kota-banyuwagi\.jpg\'\)\]{
   background-image: url('/assets/img/kota-banyuwagi.jpg');
+}
+
+.bg-section-bg{
+  background-image: url('/assets/img/wallpaperbetter.jpg');
 }
 
 .bg-cover{
@@ -1208,6 +1288,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-gray-200{
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -1525,11 +1610,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:text-gray-900:focus{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.focus\:text-gray-200:focus{
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus{

@@ -269,13 +269,9 @@ const banyuwangiPieChart = new Chart(banyuwangiPie, {
 			legend: {
 				position: "right",
 			},
-			title: {
-				display: true,
-				text: "Hasil Data",
-				align: "center",
-			},
 		},
 	},
+
 });
 
 const banyuwangiBar = document.getElementById("banyuwangi-bar").getContext("2d");

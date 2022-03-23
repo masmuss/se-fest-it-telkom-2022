@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
-	<title>Home</title>
+	<link rel="shortcut icon" href="assets/img/sidoNgoding_Logo.svg" type="image/x-icon">
+	<title>jatimNjaring</title>
 </head>
 
 <body class="bg-gray-50 transition-all scroll-smooth">
@@ -42,7 +43,7 @@
 				<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
 					href="index.html">Home</a>
 				<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-					href="index.html">About</a>
+					href="index.html#about">About</a>
 				<div @click.away="open = false" class="relative" x-data="{ open: false }">
 					<button @click="open = !open"
 						class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
@@ -62,14 +63,14 @@
 						x-transition:leave-end="transform opacity-0 scale-95"
 						class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
 						<div class="px-2 py-2 bg-gray-100 rounded-md shadow dark:bg-gray-700">
-							<a href="#data_persentase"
-								class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+							<a href="index.html#data_persentase"
+								class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 text-gray-200 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
 								href="#">Data persentase</a>
 						</div>
 					</div>
 				</div>
 				<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-					href="index.html">Quote</a>
+					href="index.html#quotes">Quote</a>
 			</nav>
 			<!-- end of menus -->
 		</div>
@@ -83,8 +84,10 @@
 				<div
 					class="w-4/5 bg-[url('/assets/img/masjid-agung-sumenep.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg">
 				</div>
-				<div class="w-full flex flex-col justify-center">
-					<div class="p-6 rounded-lg shadow-lg">
+				<div class="w-full relative flex flex-col gap-5 justify-center">
+					<img src="assets/img/Jaring pelangi.png" alt="" class="absolute top-40 -right-20 -z-50" />
+					<img src="assets/img/Jaring pelangi.png" alt="" class="absolute -bottom-16 -left-32 -z-50" />
+					<div class="p-6 rounded-lg shadow-lg bg-white">
 						<h1 class="text-4xl uppercase font-bold tracking-wide text-gray-800">1. Sumenep</h1>
 						<div class="space-y-2 mt-3">
 							<p
@@ -99,7 +102,7 @@
 								nasional maupun internasional.</p>
 						</div>
 					</div>
-					<div class="p-6 rounded-lg shadow-lg">
+					<div class="p-6 rounded-lg shadow-lg bg-white">
 						<div class="p-2">
 							<h4 class="text-center font-bold">Hasil laut</h4>
 							<h6 class="text-center font-semibold">100% (674.371 Ton)</h6>
